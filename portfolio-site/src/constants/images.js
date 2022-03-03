@@ -34,6 +34,9 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import mu501 from '../assets/mu501.png';
+import react01 from '../assets/react01.png'
+import grimmjow from '../assets/grimmjow.png'
 
 export default {
   email,
@@ -69,4 +72,7 @@ export default {
   nb,
   skype,
   spotify,
+  mu501,
+  react01,
+  grimmjow,
 };
