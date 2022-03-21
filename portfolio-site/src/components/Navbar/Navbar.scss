@@ -11,7 +11,56 @@
     border: 1px solid rgba(255, 255, 255, 0.18) ;
     position: fixed;
     z-index: 2;
+
+    @media screen and (max-width: 440px) {
+        padding: 1rem 0.3rem 1rem 0;
+    }
 }
+.app__theme-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 0.1rem 0.3rem;
+    background-color: rgba(194, 194, 194, 0.13);
+    border-radius: 30px;
+    width: 5rem;
+    
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+
+    &:hover{
+        box-shadow: 0 0 10px #dbdbdb;
+    }
+
+    @media screen and (max-width: 440px) {
+        width: 3.5rem;
+        border-radius: 21px;
+    }
+}
+.app__icon-light{
+    color: rgb(230, 230, 68);
+    width: 2rem;
+    height: auto;
+    align-self: flex-end;
+    transition: all 0.5s ease-in;
+
+    @media screen and (max-width: 440px) {
+        width: 1.4rem;
+    }
+}
+.app__icon-dark{
+    color: var(--secondary-color);
+    width: 2rem;
+    height: auto;
+    transform: translateX(40px);
+    transition: all 0.5s ease-in;
+
+    @media screen and (max-width: 440px) {
+        width: 1.4rem;
+        transform: translateX(28px)
+    }
+}
+
 
 .app__navbar-logo{
     display: flex;
@@ -29,6 +78,8 @@
         }
     }
 }
+
+
 
 .app__navbar-links{
     flex: 1;
@@ -83,6 +134,7 @@
     height: 35px;
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
@@ -92,7 +144,7 @@
     svg {
       width: 70%;
       height: 70%;
-      color: var(--white-color);  
+      color: var(--white-color); 
     }
     div{
         position: fixed;
@@ -100,6 +152,7 @@
         bottom: 0;
         right: 0;
         z-index: 5;
+        
 
         padding: 1rem;
 
@@ -114,14 +167,14 @@
         background: url('../../assets/bgWhite.png');
         background-color: var(--white-color);
         background-size: cover;
-        background-repeat: repeat;
+        
 
         box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
 
         svg{
             width: 35px;
             height: 35px;
-            color: var(--secondary-color);
+            color: #f54c4c;
             margin: 0.5rem 1rem;
         }
 
@@ -162,4 +215,12 @@
     }
     @media screen and (min-width: 900px) {
         display: none; }
+}
+
+.app__navbar-panel{
+
+    @media screen and (max-width: 500px) {
+        transition: 1.5s ease-in-out; 
+    }
+    
 }

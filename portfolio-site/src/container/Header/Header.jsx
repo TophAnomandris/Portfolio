@@ -1,13 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { AppWrap } from '../../wrapper' 
+import { AppWrap, MotionWrap } from '../../wrapper' 
+import Iframe from 'react-iframe'
 
 import { images } from '../../constants'
 
 import './Header.scss'
 
 
-const Header = () => {
+const Header = (prop) => {
 
   const scaleVariants = {
     whileInView: {
@@ -19,9 +20,16 @@ const Header = () => {
       }
     }
   }
+  const styles = prop.darkMode? {backgroundImage: ''} : {backgroundImage: `url(${images.bgIMG})`,
+  backgroundSize: 'cover',
+  backgroundepRepeat: 'repeat',
+  backgroundPosition: 'center',
+  overflow: 'hidden'}
+
+  console.log(prop.darkMode)
 
   return (
-    <div id='home' className='app__header app__flex'>
+    <div id='home' style={styles} className='app__header app__flex'>
       <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1]}}
       transition={{ duration: 0.5 }}
@@ -40,13 +48,24 @@ const Header = () => {
           </div>
         </div>
       </motion.div>
+      
 
       <motion.div
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
       >
-        <img src={images.grimmjow} alt="profile_bg" />
+        {/* <img src={images.grimmjow} alt="profile_bg" /> */}     
+
+          <div>
+          <Iframe title="New swiftXR Project" 
+
+          frameBorder="1px" zoom-level="150%"  allow="fullscreen; autoplay; vr camera; midi; encrypted-media" scrolling= 'no'  xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="270px" src="https://tophguy-avatar.netlify.app/"/>
+
+            
+          </div>
+
+
         <motion.img
         whileInView={{ scale: [0, 1]}}
         transition={{ duration: 1, ease: 'easeInOut' }}
@@ -71,4 +90,10 @@ const Header = () => {
   )
 }
 
-export default AppWrap(Header, 'home')
+
+
+export default AppWrap(
+  MotionWrap(Header, 'app__home'), 
+  'home',
+  "app__primarybg"
+  )

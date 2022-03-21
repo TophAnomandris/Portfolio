@@ -17,6 +17,11 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import bgIMG from '../assets/bgIMG.png'
+import darkbgIMG from '../assets/dark-bgIMG.png'
+import bgWhite from '../assets/bgWhite.png'
+import darkbgWhite from '../assets/dark-bgWhite.png'
+
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -75,4 +80,8 @@ export default {
   mu501,
   react01,
   grimmjow,
+  bgIMG,
+  bgWhite,
+  darkbgIMG,
+  darkbgWhite
 };

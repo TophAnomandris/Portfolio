@@ -10,7 +10,24 @@
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --red-footer: #fef4f5;
+  --blue-footer:#f2f7fb;
+  --shadow-color: rgb(0,0,0, 0.1);
 }
+
+[data-theme='dark'] {
+  --primary-color: #0e122c;
+  --secondary-color: #313bac;
+  --black-color: #ffffff;
+  --lightGray-color: #444444;
+  --gray-color: #6b7688;
+  --brown-color: #d8a7e4;
+  --white-color: #000000;
+  --red-footer: #4b3c3e;
+  --blue-footer:#323e47;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
 
 * {
   box-sizing: border-box;
